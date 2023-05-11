@@ -1,0 +1,51 @@
+.benefits {
+    padding: 120px 0;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: 'II';
+        left: calc(50% + 555px);
+        transform: translate(-50%, 0);
+
+        @include decorNumber;
+    }
+
+    &__row {
+        display: flex;
+        column-gap: 70px;
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__item-img {
+        margin-bottom: 53px;
+    }
+
+    &__item-text {
+        font-family: $font-secondary;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 1.35; 
+    }
+
+    @include mediaTablet {
+        padding: 60px 0;
+
+        &__row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 40px 30px;
+        }
+        &__item-img {
+            margin-bottom: 20px;
+            width: 60px;
+            height: 60px;
+        }
+        &__item-text {
+            font-size: 16px;
+        }
+    }
+}
